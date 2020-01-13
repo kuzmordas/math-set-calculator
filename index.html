@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://clojurescript.org/images/cljs-logo-icon-32.png">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="content">
+      <div class="ui content__math-ui">
+          <div class="ui__operations-stack" id="boolean-operations-stack"></div>
+          <svg id="imath" height="200" width="800">
+              Sorry, your browser does not support inline SVG.
+          </svg>
+            <div class="ui__set-creator-wrapp">
+                <div class="ui__set-creator">
+                    <input type="radio" name="left-interval-border"  class="ui__radio_hidden" value="[" id="left-interval-border-1" checked="">
+                    <input type="radio" name="left-interval-border"  class="ui__radio_hidden" value="(" id="left-interval-border-2">
+                    <input type="radio" name="right-interval-border" class="ui__radio_hidden" value="]" id="right-interval-border-1" checked="">
+                    <input type="radio" name="right-interval-border" class="ui__radio_hidden" value=")" id="right-interval-border-2">
+                    <div class="ui__interval-symbols" id="left-interval-symbols">
+                        <div class="ui__interval-symbols-wrap">
+                            <div class="ui__symbol-container">
+                                <p class="ui__interval-symbol">[</p>
+                            </div>
+                            <div class="ui__symbol-container">
+                                <p class="ui__interval-symbol">(</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui__interval-values">
+                        <input class="ui__input" id="start-value" type="text">
+                        <span>,</span>
+                        <input class="ui__input" id="end-value" type="text">
+                    </div>
+                    <div class="ui__interval-symbols" id="right-interval-symbols">
+                        <div class="ui__interval-symbols-wrap">
+                            <div class="ui__symbol-container">
+                                <p class="ui__interval-symbol">]</p>
+                            </div>
+                            <div class="ui__symbol-container">
+                                <p class="ui__interval-symbol">)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui__symbol-container">
+                        <p class="ui__interval-symbol">{</p>
+                    </div>
+                    <div class="ui__discret-value">
+                        <input class="ui__input" id="discret-value" type="text">
+                    </div>
+                    <div class="ui__symbol-container">
+                        <p class="ui__interval-symbol">}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui__set-operations-wrapp">
+                <div class="ui__boolean-operations">
+                    <div class="ui__boolean-operation">
+                        <input type="radio" name="boolean-operations" value="&#8898;" id="intersect" >
+                        <label class="ui__boolean-operation-label" for="boolean-union"><strong>&#8898;</strong> Intersect</label>
+                    </div>
+                    <div class="ui__boolean-operation">
+                        <input type="radio" name="boolean-operations" value="&#8726;" id="substract">
+                        <label class="ui__boolean-operation-label" for="boolean-substract"><strong>&#8726;</strong> Substract</label>
+                    </div>
+                    <div class="ui__boolean-operation">
+                        <input type="radio" name="boolean-operations" value="&#8899;" id="union" checked="true">
+                        <label class="ui__boolean-operation-label" for="boolean-intersect"><strong>&#8899;</strong> Union</label>
+                    </div>
+                </div>
+                <div class="ui__add-element">
+                    <button id="add-element-to-set" class="ui__button-add-element">Add &rarr;</button>
+                </div>
+            </div>
+            <div class="ui__set-list-wrapp">
+                <p class="ui__set-list-header">Elements of set:</p>
+                <div class="ui__set-list">
+                    <ol class="ui__ol" id="set-elements" type="A"></ol>
+                </div>
+            </div>
+            <button id="eval">Eval!</button>
+      </div>
+    </div>
+    <script src="js/index.js" type="text/javascript"></script>
+  </body>
+</html>
